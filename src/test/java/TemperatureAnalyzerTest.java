@@ -31,4 +31,10 @@ public class TemperatureAnalyzerTest {
         int[] temperatures = {5, -2, 4, 3, 7, -1, 0};
         assertEquals(3, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
     }
+
+    @Test
+    void testErrorWithInvalidTemperatureTooHigh() {
+        int[] temperatures = {21, 10, 13, 100, 30, 21, 34}; // Invalid value
+        assertEquals("Erro", TemperatureAnalyzer.validateAndCount(temperatures));
+    }
 }
