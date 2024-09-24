@@ -7,4 +7,10 @@ public class TemperatureAnalyzerTest {
         int[] temperatures = {2, 2, 2, 2, 2, 2, 3};
         assertEquals(1, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
     }
+
+    @Test
+    void testValidInputMultipleDaysAboveAverage() {
+        int[] temperatures = {21, 10, 13, 34, 30, 21, 34};
+        assertEquals(3, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
+    }
 }
