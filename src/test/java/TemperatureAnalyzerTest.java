@@ -25,4 +25,10 @@ public class TemperatureAnalyzerTest {
         int[] temperatures = {10, 10, 10, 10, 10, 10, 10};
         assertEquals(0, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
     }
+
+    @Test
+    void testInputWithNegativeValues() {
+        int[] temperatures = {5, -2, 4, 3, 7, -1, 0};
+        assertEquals(3, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
+    }
 }
