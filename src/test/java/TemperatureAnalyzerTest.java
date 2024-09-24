@@ -19,4 +19,10 @@ public class TemperatureAnalyzerTest {
         int[] temperatures = {2, 2, 2, 2, 2, 2, 1};
         assertEquals(6, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
     }
+
+    @Test
+    void testAllTemperaturesEqual() {
+        int[] temperatures = {10, 10, 10, 10, 10, 10, 10};
+        assertEquals(0, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
+    }
 }
