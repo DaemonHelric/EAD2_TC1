@@ -37,4 +37,10 @@ public class TemperatureAnalyzerTest {
         int[] temperatures = {21, 10, 13, 100, 30, 21, 34}; // Invalid value
         assertEquals("Erro", TemperatureAnalyzer.validateAndCount(temperatures));
     }
+
+    @Test
+    void testErrorWithInvalidTemperatureTooLow() {
+        int[] temperatures = {21, 10, -300, 34, 30, 21, 34}; // Invalid value
+        assertEquals("Erro", TemperatureAnalyzer.validateAndCount(temperatures));
+    }
 }
