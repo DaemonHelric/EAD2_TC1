@@ -30,7 +30,7 @@ public class TemperatureAnalyzerTest {
     @Test
     void testInputWithNegativeValues() {
         int[] temperatures = {5, -2, 4, 3, 7, -1, 0};
-        assertEquals(3, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
+        assertEquals(4, TemperatureAnalyzer.countDaysAboveAverage(temperatures));
     }
 
     @Test
