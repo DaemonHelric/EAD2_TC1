@@ -43,4 +43,10 @@ public class TemperatureAnalyzerTest {
         int[] temperatures = {21, 10, -300, 34, 30, 21, 34}; // Invalid value
         assertEquals("Erro", TemperatureAnalyzer.validateAndCount(temperatures));
     }
+
+    @Test
+    void testErrorWithInvalidArraySize() {
+        int[] temperatures = {21, 10, 13, 34, 30, 21}; // Less than 7 elements
+        assertEquals("Erro", TemperatureAnalyzer.validateAndCount(temperatures));
+    }
 }
